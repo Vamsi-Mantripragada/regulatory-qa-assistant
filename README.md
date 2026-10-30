@@ -4,6 +4,19 @@ Ask a question about the Bank of England **MLAR** reporting guidance and get a s
 
 > Public document only: [BoE MLAR guidance notes (Jan 2022)](https://www.bankofengland.co.uk/-/media/boe/files/prudential-regulation/crd-iv/mlar-notes-jan-2022.pdf). No bank, customer or client data is used.
 
+## Screenshots
+**A grounded answer in the fixed layout, with page sources**
+
+![Answer with page sources](answer.png)
+
+**A typo corrected using the document's own words**
+
+![Spelling fix](spelling.png)
+
+**An off-topic question blocked by the confidence threshold (the LLM is not called)**
+
+![Not confident](not_confident.png)
+
 ## The problem
 Reporting analysts and BAs spend hours searching long regulatory PDFs to find which row a product goes in and under what conditions. General chatbots answer from memory and can invent rules.
 
@@ -44,6 +57,8 @@ export GROQ_API_KEY=...        # free key from console.groq.com
 python app.py                  # opens the web screen
 python evaluate_qa.py          # runs the 10 tests
 ```
+
+**Live demo:** run it in Google Colab with `demo.launch(share=True)`. Gradio gives a temporary public link (72 hours) at no hosting cost, and the API key stays in Colab Secrets.
 
 ## Next
 Section metadata for scope control, a persistent vector store (Pinecone), and reranking (Cohere) for precision.
