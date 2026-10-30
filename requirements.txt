@@ -1,0 +1,6 @@
+gradio
+openai
+google-genai
+pypdf
+sentence-transformers
+requests
